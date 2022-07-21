@@ -1,20 +1,23 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title> Exp-1 </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-row class="ion-justify-content-center">
+    <ion-col class="ion-text-center" size="12">
+      <ion-item *ngFor="let item of data">
+        <div>
+          <ion-label>group:</ion-label>
+          <ion-text color="primary">
+            <h1>{{item.group}}</h1>
+            <h1>{{item.store_id}}</h1>
+            <h1>{{item.address}}</h1>
+            <h1>{{item.telephone}}</h1>
+          </ion-text>
+        </div>
+      </ion-item>
+    </ion-col>
+  </ion-row>
 </ion-content>
